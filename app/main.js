@@ -2,6 +2,6 @@ import React from 'react';
 import { render } from 'react-dom';
 
 render(
-  // <div>Hello, world!</div>,
+  <h1>Hello World</h1>,
   document.getElementById('app') // make sure this is the same as the id of the div in your index.html
 );
