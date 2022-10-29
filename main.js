@@ -1,4 +1,8 @@
 const app = require('./server')
+const db = require('./server/db')
 const PORT = process.env.PORT || 1337;
 
-app.listen(PORT, () => console.log(`studiously serving silly sounds on port ${PORT}`))
+db.sync()
+  .then(function(){
+    app.listen(PORT, () => console.log(`studiously serving silly sounds on port ${PORT}`))
+  });
