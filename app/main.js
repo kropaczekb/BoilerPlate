@@ -1,7 +1,11 @@
 import React from 'react';
 import { render } from 'react-dom';
+import { Provider } from 'react-redux'
+import store from './store'
 
 render(
-  <h1>Hello World</h1>,
-  document.getElementById('app') // make sure this is the same as the id of the div in your index.html
+  <Provider store={store}>
+    <h1>Hello World</h1>
+  </Provider>,
+  document.getElementById('app')
 );
